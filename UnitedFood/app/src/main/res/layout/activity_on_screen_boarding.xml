@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/skip_btn"
+        >
+
+    </androidx.viewpager.widget.ViewPager>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The great meal and test is here"
+        android:layout_below="@+id/slider"
+        android:textSize="20dp"
+        android:textColor="@color/gradient"
+        android:textAlignment="center"
+        android:id="@+id/txtinfo"/>
+
+
+    <Button
+        android:id="@+id/skip_btn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/gradient"
+        android:textStyle="bold"
+        android:onClick="skip"
+        android:padding="10dp"
+        android:text="Skip ->"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/txtinfo">
+
+        <Button
+            android:id="@+id/createAccountBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gradient"
+            android:text="Create New Account"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:text="Next"
+            android:backgroundTint="@color/gradient"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

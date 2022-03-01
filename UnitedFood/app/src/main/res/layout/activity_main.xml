@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer">
+
+    <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="true"
+        android:tag="menu">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gradient">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/man"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Hello Utsav!"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_below="@+id/relative1">
+
+                <TextView
+                    android:id="@+id/alertContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Orders"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:drawableTint="@color/black"
+                    app:drawableLeftCompat="@drawable/ic_baseline_browse_gallery_24" />
+
+                <TextView
+                    android:id="@+id/naviAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/alertContact"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:drawableRight="@drawable/ic_baseline_open_in_new_24"
+                    android:text="Account"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/naviAccount"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/ic_baseline_settings_24"
+                    android:drawablePadding="5dp"
+                    android:text="Settings"
+
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:background="@color/white"
+                android:layout_below="@+id/relative2">
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/btn_shap"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Rate the app"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/btn_login"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Log out"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </nl.psdcompany.duonavigationdrawer.views.DuoMenuView>
+
+
+    <androidx.cardview.widget.CardView
+        android:tag="content"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardMain">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Toolbar.color.menu"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="United Food"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="@color/gradient"/>
+        </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:id="@+id/recyItemsList"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>
